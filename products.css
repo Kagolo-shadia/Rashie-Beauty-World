@@ -42,9 +42,6 @@
   #navbarMenu.show {
     order: 2;
   }
-  .contact-section {
-    margin-top: 8rem;
-  }
 }
 @media screen and (max-width: 576px) {
   .nav-middle {
@@ -64,9 +61,6 @@
     width: 100%;
     margin-bottom: 1rem;
     text-align: center;
-  }
-  .contact-section {
-    margin-top: 8rem;
   }
 }
 html,
@@ -113,6 +107,22 @@ body {
   background-color: #e0a800;
   color: white;
 }
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.product-img {
+  transition: transform 0.3s ease;
+  height: 350px;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.04); /* Zoom image */
+}
 .header-section {
   background: url("bg.jpg") center/cover no-repeat;
   position: relative;
@@ -121,42 +131,26 @@ body {
 .header-section .container {
   position: relative;
   z-index: 1;
-}
-.words-header {
-  margin-top: 10rem;
-}
-h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
 
-  color: var(--primary-color);
-  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
-.card-title,
-h2 {
+.header-section h1 {
+  color: var(--primary-color);
+  font-weight: bolder;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.header-section p {
+  color: var(--secondary-color);
+  font-weight: bolder;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.card-title {
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--primary-color);
   margin-bottom: 1rem;
-}
-.card-body {
-  border: 1px solid var(--primary-color);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-.btn {
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
 }
